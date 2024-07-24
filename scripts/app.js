@@ -3,12 +3,19 @@ const tipClosed = document.querySelector('#tip-closed');
 const ringClosed = document.querySelector('#ring-closed');
 
 const savePreset = document.querySelector('#save-preset');
+const recallPreset = document.querySelector('#recall-preset');
 const presetNumber = document.querySelector('input', '#preset-number');
 
 
 savePreset.addEventListener('click',() => {
 	if (presetNumber.value >= 0 && presetNumber.value <= 127) {
 		sendMIDIMessage(3, presetNumber.value);
+	}
+});
+
+recallPreset.addEventListener('click',() => {
+	if (presetNumber.value >= 0 && presetNumber.value <= 127) {
+		sendMIDIMessage(6, presetNumber.value);
 	}
 });
 

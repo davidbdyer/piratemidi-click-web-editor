@@ -12,7 +12,9 @@
 
 <body>
     <header>
-        <h1>MIDI Message Sender</h1>
+        <h1>Pirate Midi CLiCK Editor</h1>
+        <p>by David Dyer</p>
+        <p>I made this super quick to be helpful. I will make it pretty and add features later.</p>
     </header>
     <main>
         <div>
@@ -21,10 +23,12 @@
             <button id="ring-closed">Ring</button>
         </div>
 
-        <label for="preset-number">Preset</label>
-        <input type="number" name="preset-number" id="preset-number">
-        <button id="save-preset" onclick="sendMIDIMessage(3, 0)">Save Preset</button>
-
+        <div>
+            <label for="preset-number">Preset</label>
+            <input type="number" name="preset-number" id="preset-number">
+            <button id="save-preset">Save Preset</button>
+            <button id="recall-preset">Recall Preset</button>
+        </div>
     </main>
 </body>
 
