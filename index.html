@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom MIDI Message Sender</title>
+</head>
+
+<body>
+    <h1>MIDI Message Sender</h1>
+    <button onclick="sendMIDIMessage(2, 0)">All Open</button>
+    <button onclick="sendMIDIMessage(0, 127)">Tip Closed</button>
+    <button onclick="sendMIDIMessage(1, 127)">Ring Closed</button>
+    <button onclick="sendMIDIMessage(3, 0)">Save Preset 0</button>
+    <button onclick="sendMIDIMessage(3, 1)">Save Preset 1</button>
+    <button onclick="sendMIDIMessage(3, 2)">Save Preset 2</button>
+    <button onclick="sendMIDIMessage(3, 3)">Save Preset 3</button>
+
+    <script>
+        let midiAccess = null;
+
+        navigator.requestMIDIAccess()
+            .then(onMIDISuccess, onMIDIFailure);
+
+        function onMIDISuccess(access) {
+            midiAccess = access;
+            console.log('MIDI access obtained');
+        }
+
+        function onMIDIFailure() {
+            console.log('Could not access your MIDI devices.');
+        }
+
+        function sendMIDIMessage(control, value) {
+            if (midiAccess) {
+                const outputs = midiAccess.outputs.values();
+                for (let output of outputs) {
+                    output.send([0xB0, control, value]); // CC message
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
