@@ -1,12 +1,18 @@
 @use 'base';
 
+:root {
+	--accent-color: #ec5280;
+	--text-color: #eeeeee;
+	--background-color: #1f2528;
+}
+
 body {
 	margin-top: 2rem;
 	margin-inline: 2rem;
-	background-color: #1f2528;
-	color: white;
-	font-family: "Roboto", sans-serif;
+	background-color: var(--background-color);
 	width: 90%;
+	color: var(--text-color);
+	font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -37,9 +43,11 @@ main {
 }
 
 button {
-	padding-inline: .5em;
-	border: none;
+	border: var(--accent-color) solid 1px;
 	border-radius: .25em;
+	background-color: transparent;
+	padding-inline: .5em;
+	color: var(--accent-color);
 }
 
 input {
@@ -48,9 +56,9 @@ input {
 }
 
 .pirate-midi-logo {
-	color: #ec5280;
-	text-transform: uppercase;
+	color: var(--accent-color);
 	font-weight: 500;
+	text-transform: uppercase;
 
 	.pirate {
 		font-weight: 200;
