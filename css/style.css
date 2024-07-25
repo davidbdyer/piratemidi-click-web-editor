@@ -115,8 +115,12 @@ button {
 }
 
 input {
-  border: none;
+  border: var(--accent-color) solid 1px;
   border-radius: 0.25em;
+  text-align: center;
+  background-color: transparent;
+  color: var(--accent-color);
+  padding-left: 0.5em;
 }
 
 .pirate-midi-logo {
