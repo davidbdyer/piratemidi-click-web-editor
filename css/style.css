@@ -110,4 +110,13 @@ input {
   border: none;
   border-radius: 0.25em;
 }
+
+.pirate-midi-logo {
+  color: #ee5965;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.pirate-midi-logo .pirate {
+  font-weight: 200;
+}
 /*# sourceMappingURL=style.css.map */
