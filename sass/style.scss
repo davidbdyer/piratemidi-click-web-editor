@@ -48,6 +48,16 @@ button {
 	background-color: transparent;
 	padding-inline: .5em;
 	color: var(--accent-color);
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		background-color: var(--accent-color);
+		color: var(--background-color);
+	}
+
+	&:active {
+		transform: scale(1.1);
+	}
 }
 
 input {
