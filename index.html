@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pirate MIDI CLiCK Editor</title>
-	
+	<data-tooltip>Pirate MIDI CLiCK Editor</data-tooltip>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -29,25 +29,25 @@
 		<div class="control-container">
 			<h2>Relay Controls</h2>
 			<div>
-				<button id="all-open">All Open</button>
-				<button id="tip-closed">Tip Toggle</button>
-				<button id="ring-closed">Ring Toggle</button>
+				<button id="all-open" title="Opens all relays">All Open</button>
+				<button id="tip-closed" title="Toggles the tip relay">Tip Toggle</button>
+				<button id="ring-closed" title="Toggles the ring relay">Ring Toggle</button>
 			</div>
 		</div>
 
 		<div class="control-container">
 			<div>
 				<label for="preset-number">Preset Number</label>
-				<input aria-label="preset number" type="number" name="preset-number" id="preset-number" min="0" max="127" placeholder="0">
+				<input aria-label="preset number" type="number" name="preset-number" id="preset-number" min="0" max="127" placeholder="0" title="Enter a preset number between 0 and 127">
 			</div>
 			<div>
-				<button id="save-preset">Save Preset</button>
-				<button id="recall-preset">Recall Preset</button>
+				<button type="button" id="save-preset">Save Preset</button>
+				<button type="button" id="recall-preset">Recall Preset</button>
 			</div>
 		</div>
 		<div>
 			<p>Web MIDI only works in Chrome, Edge, Firefox, and Opera.</p>
-			<p>I've only texted it in Chrome and Firefox</p>
+			<p>I've only tested it in Chrome and Firefox</p>
 		</div>
 	</main>
 </body>
