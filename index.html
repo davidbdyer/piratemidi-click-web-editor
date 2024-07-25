@@ -2,35 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pirate Midi CLiCK Editor</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pirate Midi CLiCK Editor</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 
-    <script src="scripts/app.js" defer></script>
+	<script src="scripts/app.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Pirate Midi CLiCK Editor</h1>
-        <p>by David Dyer</p>
-        <p>I made this super quick to be helpful. I will make it pretty and add features later.</p>
-        <p>It has only been tested in Chrome.</p>
-    </header>
-    <main>
-        <div>
-            <button id="all-open">All Open</button>
-            <button id="tip-closed">Tip</button>
-            <button id="ring-closed">Ring</button>
-        </div>
+	<header>
+		<div>
+			<h1>Pirate Midi CLiCK Editor</h1>
+			<p>by David Dyer</p>
+		</div>
+		<img src="images/click-top-face-angled_1.png" alt="CliCK">
+	</header>
+	<main>
+		<div class="control-container">
+			<h2>Relay Controls</h2>
+			<div>
+				<button id="all-open">All Open</button>
+				<button id="tip-closed">Tip Toggle</button>
+				<button id="ring-closed">Ring Toggle</button>
+			</div>
+		</div>
 
-        <div>
-            <label for="preset-number">Preset</label>
-            <input type="number" name="preset-number" id="preset-number">
-            <button id="save-preset">Save Preset</button>
-            <button id="recall-preset">Recall Preset</button>
-        </div>
-    </main>
+		<div class="control-container">
+			<div>
+				<label for="preset-number">Preset Number</label>
+				<input aria-label="preset number" type="number" name="preset-number" id="preset-number" min="0" max="127">
+			</div>
+			<div>
+				<button id="save-preset">Save Preset</button>
+				<button id="recall-preset">Recall Preset</button>
+			</div>
+		</div>
+	</main>
 </body>
 
 </html>

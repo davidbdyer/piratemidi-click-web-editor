@@ -1,0 +1,48 @@
+@use 'base';
+
+body {
+	margin-top: 2rem;
+	margin-inline: 2rem;
+	background-color: #1f2528;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	width: 90%;
+}
+
+header {
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	img {
+		max-width: 20rem;
+	}
+}
+
+main {
+	display: grid;
+	gap: 2em;
+}
+
+
+.control-container {
+	display: grid;
+	gap: .5em;
+
+	div {
+		display: flex;
+		gap: 1em;
+	}
+}
+
+button {
+	padding-inline: .5em;
+	border: none;
+	border-radius: .25em;
+}
+
+input {
+	border: none;
+	border-radius: .25em;
+}
