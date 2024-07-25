@@ -56,7 +56,12 @@ input {
 	text-align: center;
 	background-color: transparent;
 	color: var(--accent-color);
-	padding-left: .5em;
+	appearance: textfield;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
 }
 
 .pirate-midi-logo {
