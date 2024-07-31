@@ -1,0 +1,13 @@
+input {
+	appearance: textfield;
+	border: var(--accent-color) solid 1px;
+	border-radius: .25em;
+	background-color: transparent;
+	color: var(--accent-color);
+	text-align: center;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}
