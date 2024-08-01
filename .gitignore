@@ -2,3 +2,4 @@ prepros.config
 .hintrc
 node_modules/
 .DS_Store
+build/
