@@ -57,13 +57,13 @@ recallPreset.addEventListener('click', () => {
 // UX Feedback Functions
 function changeIndicatorImage(tip, ring) {
 	if (tip == true && ring == true) {
-		clickImageIndicator.src = '../images/click-all-closed.png';
+		clickImageIndicator.src = '/images/click-all-closed.png';
 	} else if (tip == true && ring == false) {
-		clickImageIndicator.src = '../images/click-tip-closed.png';
+		clickImageIndicator.src = '/images/click-tip-closed.png';
 	} else if (tip == false && ring == true) {
-		clickImageIndicator.src = '../images/click-ring-closed.png';
+		clickImageIndicator.src = '/images/click-ring-closed.png';
 	} else if (tip == false && ring == false) {
-		clickImageIndicator.src = '../images/click-all-open.png';
+		clickImageIndicator.src = '/images/click-all-open.png';
 	}
 }
 
