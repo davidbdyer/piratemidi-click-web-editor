@@ -47,19 +47,23 @@
 				<h2>Relay Controls</h2>
 				<div>
 					<button type="button" id="all-open" title="Opens all relays">All Open</button>
-					<button type="button" id="tip-closed" title="Toggles the tip relay">Tip Toggle</button>
-					<button type="button" id="ring-closed" title="Toggles the ring relay">Ring Toggle</button>
+					<button type="button" id="tip" title="Toggles the tip relay">Tip Toggle</button>
+					<button type="button" id="ring" title="Toggles the ring relay">Ring Toggle</button>
 					<button type="button" id="flip" title="Flips open to closed for both tip and ring">Flip All</button>
 				</div>
 			</div>
 			<div class="control-container">
 				<div>
 					<label for="preset-number">Preset Number</label>
-					<input aria-label="preset number" type="number" name="preset-number" id="preset-number" min="0" max="127" placeholder="0" title="Enter a preset number between 0 and 127">
+					<input aria-label="preset number" type="number" name="preset-number" id="preset-number" min="0" max="127" placeholder="0" value="0" title="Enter a preset number between 0 and 127">
+					<button type="button" class="recall-preset-number" data-preset-number="0" title="Quick Recall Preset 0">0</button>
+					<button type="button" class="recall-preset-number" data-preset-number="1" title="Quick Recall Preset 1">1</button>
+					<button type="button" class="recall-preset-number" data-preset-number="2" title="Quick Recall Preset 2">2</button>
 				</div>
 				<div>
 					<button type="button" id="save-preset">Save Preset</button>
 					<button type="button" id="recall-preset">Recall Preset</button>
+					<button type="button" id="auto-program-0-2">Auto Program Presets 0 - 2</button>
 				</div>
 			</div>
 			<div>

@@ -80,9 +80,6 @@ button:active {
 }
 
 input {
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
   border: var(--accent-color) solid 1px;
   border-radius: 0.25em;
   background-color: transparent;
@@ -90,7 +87,7 @@ input {
   text-align: center;
 }
 input::-webkit-inner-spin-button, input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  opacity: 0.5;
 }
 
 .pirate-midi-logo {
@@ -114,6 +111,11 @@ body {
   margin-block: 8vh;
   margin-inline: auto;
   width: 90%;
+}
+@media (min-width: 23.4375em) {
+  .wrapper {
+    width: unset;
+  }
 }
 
 header h1 {
@@ -143,5 +145,4 @@ main {
 .status {
   margin-block-end: 4rem;
 }
-
 /*# sourceMappingURL=style.css.map */

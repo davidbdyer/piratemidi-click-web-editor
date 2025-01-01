@@ -1,0 +1,27 @@
+@use 'sass:map';
+
+$breakpoints: (
+	'mobile-sm': 20em,
+	'mobile': 23.4375em,
+	'mobile-lg': 26.5625em,
+	'tablet': 48em,
+	'laptop': 64em,
+	'desktop': 90em,
+	'desktop-lg': 120em
+);
+
+@mixin min-w($key) {
+	$size: map.get($breakpoints, $key);
+
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin max-w($key) {
+	$size: map.get($breakpoints, $key);
+
+	@media (max-width: $size) {
+		@content;
+	}
+}
